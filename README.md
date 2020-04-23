@@ -7,7 +7,7 @@ PHP CS Fixer.
 ## Installation
 
 ```shell script
-$ composer require netgen/layouts-coding-standard 
+$ composer require netgen/layouts-coding-standard
 ```
 
 ## Usage
@@ -44,7 +44,7 @@ return Netgen\Layouts\CodingStandard\PhpCsFixer\Config::create()
             ->in(__DIR__)
     )
 ;
-``` 
+```
 
 ## Supporting PHAR distribution of PHP CS Fixer
 
@@ -57,5 +57,27 @@ require_once __DIR__ . '/vendor/netgen/layouts-coding-standard/lib/PhpCsFixer/Co
 ```
 
 This is e.g. useful if you wish to run PHP CS Fixer via GitHub action, which
-does not need running `composer install`. Check
-https://github.com/OskarStark/php-cs-fixer-ga for more details.
+does not need running `composer install`:
+
+```yaml
+# .github/workflows/ci.yml
+name: PHP CS Fixer
+on: [push, pull_request]
+
+jobs:
+  php-cs-fixer:
+    name: PHP CS Fixer
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          repository: 'netgen-layouts/layouts-coding-standard'
+          path: 'vendor/netgen/layouts-coding-standard'
+      - name: PHP CS Fixer
+        uses: OskarStark/php-cs-fixer-ga@master
+        with:
+          args: --diff --dry-run
+```
+
+Check https://github.com/OskarStark/php-cs-fixer-ga for more details.
