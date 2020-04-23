@@ -1,0 +1,61 @@
+# Netgen Layouts Coding Standard
+
+This repository provides a default configuration used by all Netgen Layouts
+projects to check for coding standards violations. The config is based on
+PHP CS Fixer.
+
+## Installation
+
+```shell script
+$ composer require netgen/layouts-coding-standard 
+```
+
+## Usage
+
+Create a `.php_cs` file in the root of your project with the following:
+
+```php
+return Netgen\Layouts\CodingStandard\PhpCsFixer\Config::create()
+    ->setFinder(
+        PhpCsFixer\Finder::create()
+            ->exclude(['vendor'])
+            ->in(__DIR__)
+    )
+;
+```
+
+Run the fixer with:
+
+```shell script
+$ vendor/bin/php-cs-fixer fix
+```
+
+## Overriding existing rules
+
+You can override rules included in this config per project:
+
+```php
+return Netgen\Layouts\CodingStandard\PhpCsFixer\Config::create()
+    ->addRules([
+        'list_syntax' => ['syntax' => 'long'],
+    ])
+    ->setFinder(
+        PhpCsFixer\Finder::create()
+            ->in(__DIR__)
+    )
+;
+``` 
+
+## Supporting PHAR distribution of PHP CS Fixer
+
+You can also support running PHAR version of PHP CS Fixer by adding the
+following at the top of your `.php_cs` file:
+
+```php
+// To support running PHP CS Fixer via PHAR file (e.g. in GitHub Actions)
+require_once __DIR__ . '/vendor/netgen/layouts-coding-standard/lib/PhpCsFixer/Config.php';
+```
+
+This is e.g. useful if you wish to run PHP CS Fixer via GitHub action, which
+does not need running `composer install`. Check
+https://github.com/OskarStark/php-cs-fixer-ga for more details.
