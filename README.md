@@ -7,7 +7,7 @@ PHP CS Fixer.
 ## Installation
 
 ```shell script
-$ composer require netgen/layouts-coding-standard
+$ composer require --dev netgen/layouts-coding-standard
 ```
 
 ## Usage
