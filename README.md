@@ -73,8 +73,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/checkout@v2
         with:
-          repository: 'netgen-layouts/layouts-coding-standard'
-          path: 'vendor/netgen/layouts-coding-standard'
+          repository: netgen-layouts/layouts-coding-standard
+          path: vendor/netgen/layouts-coding-standard
       - name: PHP CS Fixer
         uses: OskarStark/php-cs-fixer-ga@master
         with:
