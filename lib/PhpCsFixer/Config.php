@@ -32,6 +32,8 @@ final class Config extends BaseConfig
             ->setRiskyAllowed(true)
             ->setRules(
                 [
+                    '@PSR12' => true,
+                    '@PSR12:risky' => true,
                     '@PhpCsFixer' => true,
                     '@PhpCsFixer:risky' => true,
 
@@ -42,14 +44,13 @@ final class Config extends BaseConfig
                     'native_function_invocation' => ['include' => ['@all']],
                     'no_superfluous_phpdoc_tags' => false,
                     'no_unset_on_property' => false,
-                    'ordered_imports' => ['imports_order' => ['class', 'function', 'const']],
+                    'ordered_imports' => ['imports_order' => ['class', 'function', 'const'], 'sort_algorithm' => 'alpha'],
                     'php_unit_internal_class' => false,
                     'php_unit_test_case_static_method_calls' => ['call_type' => 'self'],
                     'php_unit_test_class_requires_covers' => false,
                     'phpdoc_align' => false,
                     'phpdoc_types_order' => ['null_adjustment' => 'always_last', 'sort_algorithm' => 'none'],
                     'single_line_comment_style' => false,
-                    'visibility_required' => ['elements' => ['property', 'method', 'const']],
                     'yoda_style' => false,
 
                     // Additional rules
