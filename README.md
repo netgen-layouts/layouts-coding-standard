@@ -12,10 +12,10 @@ $ composer require --dev netgen/layouts-coding-standard
 
 ## Usage
 
-Create a `.php_cs` file in the root of your project with the following:
+Create a `.php-cs-fixer.php` file in the root of your project with the following:
 
 ```php
-return Netgen\Layouts\CodingStandard\PhpCsFixer\Config::create()
+return (new Netgen\Layouts\CodingStandard\PhpCsFixer\Config())
     ->setFinder(
         PhpCsFixer\Finder::create()
             ->exclude(['vendor'])
@@ -35,7 +35,7 @@ $ vendor/bin/php-cs-fixer fix
 You can override rules included in this config per project:
 
 ```php
-return Netgen\Layouts\CodingStandard\PhpCsFixer\Config::create()
+return (new Netgen\Layouts\CodingStandard\PhpCsFixer\Config())
     ->addRules([
         'list_syntax' => ['syntax' => 'long'],
     ])
@@ -50,7 +50,7 @@ return Netgen\Layouts\CodingStandard\PhpCsFixer\Config::create()
 ## Supporting PHAR distribution of PHP CS Fixer
 
 You can also support running PHAR version of PHP CS Fixer by adding the
-following at the top of your `.php_cs` file:
+following at the top of your `.php-cs-fixer.php` file:
 
 ```php
 // To support running PHP CS Fixer via PHAR file (e.g. in GitHub Actions)

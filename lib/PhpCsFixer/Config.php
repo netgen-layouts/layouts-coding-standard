@@ -62,7 +62,6 @@ final class Config extends BaseConfig
                         'import_functions' => true,
                     ],
                     'heredoc_indentation' => ['indentation' => 'same_as_start'],
-                    'list_syntax' => ['syntax' => 'short'],
                     'mb_str_functions' => true,
                     'native_constant_invocation' => true,
                     'nullable_type_declaration_for_default_null_value' => true,
