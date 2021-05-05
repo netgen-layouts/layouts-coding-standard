@@ -51,6 +51,7 @@ final class Config extends BaseConfig
                     'phpdoc_align' => false,
                     'phpdoc_types_order' => ['null_adjustment' => 'always_last', 'sort_algorithm' => 'none'],
                     'single_line_comment_style' => false,
+                    'trailing_comma_in_multiline' => ['elements' => ['arrays', 'arguments']],
                     'yoda_style' => false,
 
                     // Additional rules
@@ -68,7 +69,7 @@ final class Config extends BaseConfig
                     'static_lambda' => true,
                     'ternary_to_null_coalescing' => true,
                     'use_arrow_functions' => true,
-                ]
+                ],
             );
     }
 }
