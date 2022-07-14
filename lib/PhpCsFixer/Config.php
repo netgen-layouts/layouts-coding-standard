@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Netgen\Layouts\CodingStandard\PhpCsFixer;
 
 use PhpCsFixer\Config as BaseConfig;
+
 use function array_merge;
 
 final class Config extends BaseConfig
