@@ -70,8 +70,8 @@ jobs:
     name: PHP CS Fixer
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         with:
           repository: netgen-layouts/layouts-coding-standard
           path: vendor/netgen/layouts-coding-standard
