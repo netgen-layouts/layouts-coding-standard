@@ -14,6 +14,9 @@
         "phpstan/phpstan-strict-rules": "^1.4",
         "vimeo/psalm": "^5.4"
     },
+    "config": {
+        "allow-plugins": false
+    },
     "scripts": {
         "phpstan": "@php vendor/bin/phpstan analyse -c phpstan.neon --level=8 --ansi lib",
         "psalm": "@php vendor/bin/psalm -c psalm.xml --show-info=false"
