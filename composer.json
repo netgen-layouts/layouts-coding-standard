@@ -8,10 +8,8 @@
             "homepage": "https://netgen.io"
         }
     ],
-    "require": {
-        "friendsofphp/php-cs-fixer": "^3.13"
-    },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.13",
         "phpstan/phpstan": "^1.9",
         "phpstan/phpstan-strict-rules": "^1.4",
         "vimeo/psalm": "^5.4"
