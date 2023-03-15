@@ -33,8 +33,8 @@ final class Config extends BaseConfig
             ->setRiskyAllowed(true)
             ->setRules(
                 [
-                    '@PSR12' => true,
-                    '@PSR12:risky' => true,
+                    '@PER' => true,
+                    '@PER:risky' => true,
                     '@PhpCsFixer' => true,
                     '@PhpCsFixer:risky' => true,
 
