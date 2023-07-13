@@ -46,6 +46,7 @@ final class Config extends BaseConfig
                     'no_superfluous_phpdoc_tags' => false,
                     'no_unset_on_property' => false,
                     'ordered_imports' => ['imports_order' => ['class', 'function', 'const'], 'sort_algorithm' => 'alpha'],
+                    'php_unit_data_provider_name' => false,
                     'php_unit_internal_class' => false,
                     'php_unit_test_case_static_method_calls' => ['call_type' => 'self'],
                     'php_unit_test_class_requires_covers' => false,
