@@ -76,7 +76,7 @@ jobs:
           repository: netgen-layouts/layouts-coding-standard
           path: vendor/netgen/layouts-coding-standard
       - name: PHP CS Fixer
-        uses: OskarStark/php-cs-fixer-ga@master
+        uses: docker://oskarstark/php-cs-fixer-ga
         with:
           args: --diff --dry-run
 ```
