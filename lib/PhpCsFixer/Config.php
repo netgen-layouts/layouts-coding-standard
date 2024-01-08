@@ -33,13 +33,14 @@ final class Config extends BaseConfig
             ->setRiskyAllowed(true)
             ->setRules(
                 [
-                    '@PER' => true,
-                    '@PER:risky' => true,
+                    '@PER-CS' => true,
+                    '@PER-CS:risky' => true,
                     '@PhpCsFixer' => true,
                     '@PhpCsFixer:risky' => true,
 
                     // Overrides for rules included in PhpCsFixer rule sets
                     'concat_space' => ['spacing' => 'one'],
+                    'fully_qualified_strict_types' => ['phpdoc_tags' => []],
                     'method_chaining_indentation' => false,
                     'multiline_whitespace_before_semicolons' => false,
                     'native_function_invocation' => ['include' => ['@all']],
