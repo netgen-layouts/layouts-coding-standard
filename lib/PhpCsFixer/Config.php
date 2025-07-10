@@ -49,6 +49,7 @@ final class Config extends BaseConfig
                     'operator_linebreak' => false,
                     'ordered_imports' => ['imports_order' => ['class', 'function', 'const'], 'sort_algorithm' => 'alpha'],
                     'ordered_types' => ['null_adjustment' => 'always_last', 'sort_algorithm' => 'none'],
+                    'php_unit_data_provider_method_order' => false,
                     'php_unit_data_provider_name' => false,
                     'php_unit_internal_class' => false,
                     'php_unit_test_case_static_method_calls' => ['call_type' => 'self'],
@@ -58,7 +59,7 @@ final class Config extends BaseConfig
                     'phpdoc_types_order' => ['null_adjustment' => 'always_last', 'sort_algorithm' => 'none'],
                     'single_line_comment_style' => false,
                     'trailing_comma_in_multiline' => ['elements' => ['arrays', 'arguments']],
-                    'yoda_style' => false,
+                    'yoda_style' => ['equal' => false, 'identical' => false, 'less_and_greater' => false],
 
                     // Additional rules
                     'date_time_immutable' => true,
