@@ -15,7 +15,7 @@ $ composer require --dev netgen/layouts-coding-standard
 Create a `.php-cs-fixer.php` file in the root of your project with the following:
 
 ```php
-return (new Netgen\Layouts\CodingStandard\PhpCsFixer\Config())
+return new Netgen\Layouts\CodingStandard\PhpCsFixer\Config()
     ->setFinder(
         PhpCsFixer\Finder::create()
             ->exclude(['vendor'])
@@ -35,7 +35,7 @@ $ vendor/bin/php-cs-fixer fix
 You can override rules included in this config per project:
 
 ```php
-return (new Netgen\Layouts\CodingStandard\PhpCsFixer\Config())
+return new Netgen\Layouts\CodingStandard\PhpCsFixer\Config()
     ->addRules([
         'list_syntax' => ['syntax' => 'long'],
     ])

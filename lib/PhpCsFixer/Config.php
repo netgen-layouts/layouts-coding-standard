@@ -6,8 +6,6 @@ namespace Netgen\Layouts\CodingStandard\PhpCsFixer;
 
 use PhpCsFixer\Config as BaseConfig;
 
-use function array_merge;
-
 final class Config extends BaseConfig
 {
     public function __construct(string $name = 'default')
@@ -22,7 +20,7 @@ final class Config extends BaseConfig
      */
     public function addRules(array $rules): self
     {
-        $this->setRules(array_merge($this->getRules(), $rules));
+        $this->setRules([...$this->getRules(), ...$rules]);
 
         return $this;
     }
@@ -42,6 +40,7 @@ final class Config extends BaseConfig
                     'concat_space' => ['spacing' => 'one'],
                     'fully_qualified_strict_types' => ['phpdoc_tags' => []],
                     'method_chaining_indentation' => false,
+                    'multiline_promoted_properties' => true,
                     'multiline_whitespace_before_semicolons' => false,
                     'native_function_invocation' => ['include' => ['@all']],
                     'no_superfluous_phpdoc_tags' => false,
@@ -58,7 +57,7 @@ final class Config extends BaseConfig
                     'phpdoc_order' => ['order' => ['param', 'throws', 'return']],
                     'phpdoc_types_order' => ['null_adjustment' => 'always_last', 'sort_algorithm' => 'none'],
                     'single_line_comment_style' => false,
-                    'trailing_comma_in_multiline' => ['elements' => ['arrays', 'arguments']],
+                    'trailing_comma_in_multiline' => ['elements' => ['arrays', 'arguments', 'match', 'parameters']],
                     'yoda_style' => ['equal' => false, 'identical' => false, 'less_and_greater' => false],
 
                     // Additional rules
@@ -70,7 +69,7 @@ final class Config extends BaseConfig
                         'import_functions' => true,
                     ],
                     'heredoc_indentation' => ['indentation' => 'same_as_start'],
-                    // 'mb_str_functions' => true,
+                    'mb_str_functions' => true,
                     'native_constant_invocation' => true,
                     'nullable_type_declaration_for_default_null_value' => true,
                     'static_lambda' => true,
