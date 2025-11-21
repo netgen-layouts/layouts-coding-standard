@@ -61,17 +61,18 @@ This is e.g. useful if you wish to run PHP CS Fixer via GitHub action, which
 does not need running `composer install`:
 
 ```yaml
-# .github/workflows/ci.yml
-name: PHP CS Fixer
+# .github/workflows/coding_standards.yml
+name: Coding standards
 on: [push, pull_request]
 
 jobs:
   php-cs-fixer:
     name: PHP CS Fixer
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6
         with:
           repository: netgen-layouts/layouts-coding-standard
           path: vendor/netgen/layouts-coding-standard
