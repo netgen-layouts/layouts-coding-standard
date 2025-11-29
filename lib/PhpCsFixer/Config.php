@@ -51,7 +51,7 @@ final class Config extends BaseConfig
                     'php_unit_data_provider_method_order' => false,
                     'php_unit_data_provider_name' => false,
                     'php_unit_internal_class' => false,
-                    'php_unit_test_case_static_method_calls' => ['call_type' => 'self'],
+                    'php_unit_test_case_static_method_calls' => false,
                     'php_unit_test_class_requires_covers' => false,
                     'phpdoc_align' => false,
                     'phpdoc_order' => ['order' => ['param', 'throws', 'return']],
