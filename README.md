@@ -6,7 +6,7 @@ PHP CS Fixer.
 
 ## Installation
 
-```shell script
+```bash
 $ composer require --dev netgen/layouts-coding-standard
 ```
 
@@ -15,6 +15,8 @@ $ composer require --dev netgen/layouts-coding-standard
 Create a `.php-cs-fixer.php` file in the root of your project with the following:
 
 ```php
+<?php
+
 return new Netgen\Layouts\CodingStandard\PhpCsFixer\Config()
     ->setFinder(
         PhpCsFixer\Finder::create()
@@ -26,7 +28,7 @@ return new Netgen\Layouts\CodingStandard\PhpCsFixer\Config()
 
 Run the fixer with:
 
-```shell script
+```bash
 $ vendor/bin/php-cs-fixer fix
 ```
 
@@ -35,6 +37,8 @@ $ vendor/bin/php-cs-fixer fix
 You can override rules included in this config per project:
 
 ```php
+<?php
+
 return new Netgen\Layouts\CodingStandard\PhpCsFixer\Config()
     ->addRules([
         'list_syntax' => ['syntax' => 'long'],
