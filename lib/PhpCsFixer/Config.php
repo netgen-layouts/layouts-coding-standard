@@ -63,11 +63,7 @@ final class Config extends BaseConfig
                     // Additional rules
                     'date_time_immutable' => true,
                     'declare_strict_types' => true,
-                    'global_namespace_import' => [
-                        'import_classes' => null,
-                        'import_constants' => true,
-                        'import_functions' => true,
-                    ],
+                    'global_namespace_import' => ['import_classes' => null, 'import_constants' => true, 'import_functions' => true],
                     'heredoc_indentation' => ['indentation' => 'same_as_start'],
                     'mb_str_functions' => true,
                     'native_constant_invocation' => true,
